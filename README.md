@@ -1,5 +1,6 @@
 # pubnub-api-example
-simple example using the pubnub api in python and javascript
+This project is a simple example using the pubnub api in Python and JavaScript.
+Publishers send a random sequence of characters (the exact length varies but is typically about 100) to a channel. Subscribes will watch for messages and give a frequency count. (Future versions may implement a Chi-Squared Test so you can see if your random number generator is any good.)
 
 This demo expects a private-keys.sh file with the following structure
 
@@ -9,14 +10,14 @@ export SUB_KEY=sub-c-ffffffff-ffff-ffff-ffff-ffffffffffff
 export SEC_KEY=sec-c-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-Run the launch.sh script with a path to the private-keys.sh file.
+Run the run-example.sh script with a path to the private-keys.sh file.
 
-`./launch.sh private-keys.sh`
+`./run_examples.sh private-keys.sh`
 
-The script will prompt you for which of the script to execute. publishers publish random characters to channel "a", subscibers listen to all messages and print the channel name, original message, and the frequency for each character to STDOUT.
+The script will prompt you for which of the script to execute. Publishers publish random characters to channel set by the environment variable CHANNEL_NAME or "chars" if none is set. Subscibers listen to all messages and print the channel name, original message, and the frequency for each character to STDOUT.
 
 ```
-$ ./launch.sh private-keys.sh
+$ ./run_examples.sh private-keys.sh
 launch python publisher  (y/n)? y
 launch nodejs publisher  (y/n)? y
 launch python subscriber (y/n)? y
