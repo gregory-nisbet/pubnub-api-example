@@ -27,6 +27,5 @@ launch nodejs subscriber (y/n)? y
 example output:
 
 ```
-python recevied:{'frequency count': {'l': 1, ' ': 1, 'n': 1, 'e': 1, 'd': 1, ':': 1, ',': 1, 'r': 1, 'o': 1}, 'channel': 'a', 'message': 'node: r,l'}
-{"message":"node: r,l","channel":[["node: r,l"],"14276784485716672"],"frequency_count":{"n":1,"o":1,"d":1,"e":1,":":1," ":1,"r":1,",":1,"l":1}}
+python recevied:{'channel': 'chars', 'message': 'dtzhnavilexlbloxvjhletnpcamnifhlapudnhmvzbjfaizicspkdhvtgxmxvysoqftsvgslgvxmfkqsbqsocslkagyjwcuslgftzkzewilhcnjltawquxxtmdgbumtpvdmcxeoquhuetuyomoyfmeqtfbaodsxclcfgvrfpulisqdydytjvatpldwtzzmmhugmcbc', 'frequency count': {'u': 9, 'n': 5, 'l': 13, 't': 13, 'z': 7, 'x': 9, 'd': 9, 'y': 6, 'm': 12, 'g': 8, 'i': 6, 'v': 10, 'q': 7, 'j': 5, 'o': 7, 'e': 6, 'p': 6, 'r': 1, 'w': 4, 'b': 6, 's': 10, 'a': 8, 'f': 9, 'h': 8, 'c': 10, 'k': 4}}
 ```
