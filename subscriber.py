@@ -1,7 +1,7 @@
 from collections import defaultdict
 import re
 import json
-
+import os
 import Pubnub as PB
 
 pub_key = os.environ["PUB_KEY"]
