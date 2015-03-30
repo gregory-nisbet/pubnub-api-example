@@ -2,7 +2,7 @@
 This project is a simple example using the pubnub api in Python and JavaScript.
 Publishers send a random sequence of characters (the exact length varies but is typically about 100) to a channel. Subscribes will watch for messages and give a frequency count. (Future versions may implement a Chi-Squared Test so you can see if your random number generator is any good.)
 
-This demo expects a private-keys.sh file with the following structure
+This demo expects a private-keys.conf file with the following structure
 
 ```
 export PUB_KEY=pub-c-ffffffff-ffff-ffff-ffff-ffffffffffff 
