@@ -3,6 +3,7 @@ var PB = require('pubnub');
 var PUB_KEY = process.env.PUB_KEY; 
 var SUB_KEY = process.env.SUB_KEY;
 var SEC_KEY = process.env.SEC_KEY;
+var CHANNEL_NAME = process.env.CHANNEL_NAME;
 
 var pubnub = PB({
     publish_key : PUB_KEY,
@@ -24,9 +25,9 @@ var random_text = function () {
 
 var next = function () {
     pubnub.publish({
-        channel : "textstream",
+        channel : CHANNEL_NAME,
         message : "node: " + random_text()
     });
 }
 
-setInterval(next, 5000);
+setInterval(next, 500);

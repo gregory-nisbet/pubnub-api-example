@@ -18,6 +18,8 @@ source "$1"
 [[ ! -z "$PUB_KEY" ]] || fatal_error "no publisher key"
 [[ ! -z "$SUB_KEY" ]] || fatal_error "no subscriber key"
 [[ ! -z "$SEC_KEY" ]] || fatal_error "no secret key"
+[[ ! -z "$CHANNEL_NAME" ]] || CHANNEL_NAME="chars"
+export CHANNEL_NAME
 
 function prompt {
     local question=$1

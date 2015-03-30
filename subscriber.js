@@ -3,6 +3,7 @@ var PB = require('pubnub');
 var PUB_KEY = process.env.PUB_KEY;
 var SUB_KEY = process.env.SUB_KEY;
 var SEC_KEY = process.env.SEC_KEY;
+var CHANNEL_NAME = process.env.CHANNEL_NAME;
 
 var pubnub = PB({
     publish_key : PUB_KEY,
@@ -22,7 +23,7 @@ var frequency_count = function (text) {
 };
 
 pubnub.subscribe({
-    channel: "a",
+    channel: CHANNEL_NAME,
     callback: function (message, channel) {
         var out = {};
         out.message = message;

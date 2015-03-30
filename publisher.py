@@ -9,6 +9,7 @@ import Pubnub as PB
 PUB_KEY = os.environ["PUB_KEY"]
 SUB_KEY = os.environ["SUB_KEY"]
 SEC_KEY = os.environ["SEC_KEY"]
+CHANNEL_NAME = os.environ["CHANNEL_NAME"]
 
 pubnub = PB.Pubnub(
     publish_key = PUB_KEY,
@@ -27,8 +28,8 @@ def random_text():
 
 if __name__ == "__main__":
     while True:
-        time.sleep(10)
         pubnub.publish(
-            channel="a",
+            channel=CHANNEL_NAME,
             message= "python:" + random_text(),
         )
+        time.sleep(4)
