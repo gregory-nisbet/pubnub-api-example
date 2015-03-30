@@ -24,10 +24,9 @@ var frequency_count = function (text) {
 
 pubnub.subscribe({
     channel: CHANNEL_NAME,
-    callback: function (message, channel) {
+    callback: function (message) {
         var out = {};
         out.message = message;
-        out.channel = channel;
         out.frequency_count = frequency_count(message);
         console.log(JSON.stringify(out));	
     },

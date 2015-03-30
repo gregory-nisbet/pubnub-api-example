@@ -22,7 +22,7 @@ pubnub = PB.Pubnub(
 def random_text():
     "generate a random string with a random length"
     out = []
-    while random.random() > 0.01:
+    while random.random() > 0.03:
         out.append(random.choice("abcefghijklmnopqrstuvwxyz"))
     return "".join(out)
 

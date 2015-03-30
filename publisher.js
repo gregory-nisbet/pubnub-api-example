@@ -17,7 +17,7 @@ var choice = function (arr) {
 
 var random_text = function () {
     out = []
-    while (Math.random() > 0.01) {
+    while (Math.random() > 0.03) {
         out.push(choice("abcdefghijklmnopqrstuvwxyz"));
     }
     return out;
