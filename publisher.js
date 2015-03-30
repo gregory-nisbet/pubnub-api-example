@@ -20,13 +20,13 @@ var random_text = function () {
     while (Math.random() > 0.03) {
         out.push(choice("abcdefghijklmnopqrstuvwxyz"));
     }
-    return out;
+    return out.join();
 };
 
 var next = function () {
     pubnub.publish({
         channel : CHANNEL_NAME,
-        message : "node: " + random_text()
+        message : random_text()
     });
 }
 

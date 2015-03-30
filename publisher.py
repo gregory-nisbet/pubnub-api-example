@@ -30,6 +30,6 @@ if __name__ == "__main__":
     while True:
         pubnub.publish(
             channel=CHANNEL_NAME,
-            message= "python:" + random_text(),
+            message=random_text(),
         )
         time.sleep(4)
