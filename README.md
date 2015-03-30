@@ -12,12 +12,12 @@ export SEC_KEY=sec-c-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 Run the run-example.sh script with a path to the private-keys.sh file.
 
-`./run_examples.sh private-keys.sh`
+`./run_examples.sh private-keys.conf`
 
 The script will prompt you for which of the script to execute. Publishers publish random characters to channel set by the environment variable CHANNEL_NAME or "chars" if none is set. Subscibers listen to all messages and print the channel name, original message, and the frequency for each character to STDOUT.
 
 ```
-$ ./run_examples.sh private-keys.sh
+$ ./run_examples.sh private-keys.conf
 launch python publisher  (y/n)? y
 launch nodejs publisher  (y/n)? y
 launch python subscriber (y/n)? y
