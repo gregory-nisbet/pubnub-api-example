@@ -20,7 +20,7 @@ var random_text = function () {
     while (Math.random() > 0.03) {
         out.push(choice("abcdefghijklmnopqrstuvwxyz"));
     }
-    return out.join();
+    return out.join('');
 };
 
 var next = function () {
