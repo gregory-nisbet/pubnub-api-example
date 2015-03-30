@@ -4,17 +4,9 @@ import json
 import os
 import Pubnub as PB
 
-pub_key = os.environ["PUB_KEY"]
-sub_key = os.environ["SUB_KEY"]
-sec_key = os.environ["SEC_KEY"]
-
-pubnub = PB.Pubnub(
-	publish_key = pub_key,
-	subscribe_key = sub_key,
-	secret_key = sec_key,
-	cipher_key = '',
-	ssl_on = False,
-)
+PUB_KEY = os.environ["PUB_KEY"]
+SUB_KEY = os.environ["SUB_KEY"]
+SEC_KEY = os.environ["SEC_KEY"]
 
 def frequency_count(text):
 	count = defaultdict(int)
@@ -34,7 +26,13 @@ def error(message):
 		"error" : message
 	})
 
-pubnub.subscribe(
+PB.Pubnub(
+	publish_key = PUB_KEY,
+	subscribe_key = SUB_KEY,
+	secret_key = SEC_KEY,
+	cipher_key = '',
+	ssl_on = False,
+).subscribe(
 	channels="a",
 	callback=callback,
 	error=error

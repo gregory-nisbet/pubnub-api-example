@@ -1,13 +1,13 @@
 var PB = require('pubnub');
 
-pub_key = process.env.PUB_KEY; 
-sub_key = process.env.SUB_KEY;
-sec_key = process.env.SEC_KEY;
+var PUB_KEY = process.env.PUB_KEY; 
+var SUB_KEY = process.env.SUB_KEY;
+var SEC_KEY = process.env.SEC_KEY;
 
 var pubnub = PB({
-	publish_key : pub_key,
-	subscribe_key : sub_key,
-	secret_key : sec_key,
+	publish_key : PUB_KEY,
+	subscribe_key : SUB_KEY,
+	secret_key : SEC_KEY,
 });
 
 var choice = function (arr) {
@@ -24,7 +24,7 @@ var random_text = function () {
 
 var next = function () {
 	pubnub.publish({
-		channel : "a",
+		channel : "textstream",
 		message : "node: " + random_text()
 	});
 }
