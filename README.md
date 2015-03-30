@@ -10,7 +10,7 @@ export SUB_KEY=sub-c-ffffffff-ffff-ffff-ffff-ffffffffffff
 export SEC_KEY=sec-c-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-Run the run-example.sh script with a path to the private-keys.sh file.
+Run the run-example.sh script with a path to the private-keys.conf file.
 
 `./run_examples.sh private-keys.conf`
 
